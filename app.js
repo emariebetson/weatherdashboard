@@ -1,22 +1,8 @@
 $(document).ready(function() {
-    $.ajax({
-      url: "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22",
-      method: "GET"
-    }).then(function(response) {
-      console.log(response);
-      /* parse data */
-    });
-});
-
-$(document).ready(function() {
   // change search-button, search-value
   $("#search-button").on("click", function() {
     var searchValue = $("#search-value").val();
-    $('.today forecast').click(function() {
-      $(".search-value").val().appendTo(".submit");
-  });
     // clear input box
-    $("#search-value").val("");
     getForecast(searchValue);
   });
   function getForecast(searchValue) {
@@ -66,21 +52,3 @@ $(document).ready(function() {
     });
   }
 });
-
-/* variables */
-/* parsed weather object */
-
-/* utility functions */
-/* get raw data */
-/* parse raw data */
-/* render parsed data */
-
-/* event functions */
-/* search button click */
-/* have city name  */
-/* send city name to a openweather api */
-/* set the weather info to the object returned (see raw data) */
-
-/* init */
-/* check local storage for history of cities and render */
-
